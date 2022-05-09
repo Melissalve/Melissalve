@@ -1,4 +1,3 @@
-<?php
 aluno1 = input ("digite o nome do aluno");
 nt1 = float(inpunt("Digite 1 nota");
 nt2 = float(inpunt("Digite 2 nota");
@@ -10,4 +9,4 @@ if media >=7 and faltas < 20;
 else:
   print("Aluno:", aluno1, "Reprovado");
 
-?>
+
