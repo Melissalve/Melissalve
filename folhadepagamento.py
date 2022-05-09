@@ -1,5 +1,4 @@
-<? php
-  nomefunc = input("Digite o nome do Funcionário"); 
+nomefunc = input("Digite o nome do Funcionário"); 
 horatraba = int(input("Digite as horas trabalhadas"));
 valorhora = float(input("Digite o valor das horas trabalhadas"));
 valorbruto = horatraba * valorhora;
@@ -29,4 +28,4 @@ print("Valor à Receber:", valorliqui);
 
 
 
-?>
+
