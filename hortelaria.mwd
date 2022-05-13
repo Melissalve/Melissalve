@@ -1,0 +1,40 @@
+CREATE TABLE Recepcao(
+    codigo int primary key,
+    cadastro varchar(20),
+    diaria float(5),
+    entrada float(6),
+    saida float(6),
+    foreign key (cod_quartos) references quartos (codigo),
+    foreign key (cod_serv_extra) references serv_extra (codigo),
+    foreign key (cod_info_adicinonais) references info_adicinonais (codigo)
+);
+
+CREATE TABLE Quartos(
+     codigo int primary key,
+     simples varchar(2),
+     duplo varchar(2),
+     luxo varchar(2),
+     foreign key (cod_opcoes) references opcoes (codigo)
+);
+
+
+CREATE TABLE Info_adicionais(
+    codigo int primary key,
+    quarto_hospedes int(2),
+    pets char(5),
+    acessibilidade char(4)
+);
+
+CREATE TABLE Serv_externos(
+    codigo int primary key,
+    restaurante varchar(15),
+    lavanderia varchar(5),
+    frigobar varchar(5)
+);
+
+CREATE TABLE Opcoes(
+    codigo int primary key,
+    diaria float(10),
+    valores float(20),
+    
+);
