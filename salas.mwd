@@ -1,0 +1,37 @@
+create table salas(
+codigo int primary key,
+capacidade int,
+assentos_disp int,
+sessoes varchar (20),
+horario float (30)
+);
+
+create table cinema(
+codigo int primary key,
+salas char,
+foreign key(cod_bilheteria)references bilheteria(codigo),
+foreign key(cod_filmes)references filmes(codigo)
+);
+
+create table bilheteria(
+codigo int primary key,
+ingresso varchar (30),
+foreign key(cod_filmes)references filmes(codigo),
+foreign key(cod_salas)references salas(codigo)
+);
+
+create table filmes(
+codigo int primary key,
+registro varchar (30),
+genero varchar(30),
+atores varchar(30),
+duracao float(30),
+foreign key(cod_bilheteria)references bilheteria(codigo)
+);
+
+create table sessao(
+codigo int primary key,
+horario float(30),
+foreign key(cod_filmes)references filmes(codigo),
+foreign key(cod_salas)references salas(codigo)
+);
