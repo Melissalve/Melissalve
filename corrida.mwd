@@ -1,0 +1,38 @@
+CREATE TABLE Cliente(
+    codigo int primary key,
+    nome varchar(20),
+    endereco varchar(30),
+    telefone char(11)
+);
+
+CREATE TABLE Cooperado(
+    codigo int primary key,
+    nome varchar(20),
+    endereco varchar(30),
+    carteira varchar(20),
+    validade date,
+    categoria char(4)
+);
+
+CREATE TABLE Carro(
+    codigo int primary key,
+    fabricante varchar(30),
+    modelo varchar(30),
+    placa char(7)
+);
+
+CREATE TABLE Endereco(
+    codigo int primary key,
+    longradouro varchar(30),
+    bairro varchar(20),
+    cidade varchar(20),
+    estado varchar(20)
+);
+
+CREATE TABLE Corrida_programada(
+    codigo int primary key,
+    data_hora_i: TO_DATE('10/10/2022 22:15:12','DD/MM/YYYY
+hh24:mi:ss'),
+    data_hora_f: TO_DATE('10/10/2022 22:15:12','DD/MM/YYYY
+hh24:mi:ss')
+);
